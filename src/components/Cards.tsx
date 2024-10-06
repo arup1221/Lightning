@@ -1,10 +1,28 @@
+'use client';
 import React from 'react'
 import SmallCard from './subcomponent/SmallCard'
 import { cardData } from '../../data/data'
+import { motion } from "framer-motion";
 
 const Cards = () => {
   return (
-    <div className='flex justify-center mt-20 px-4'>
+    <motion.div
+      variants={{
+        hidden: {
+          opacity: 0,
+          y: 20, 
+        },
+        visible: {
+          opacity: 1,
+          y: 0,
+        },
+      }}
+      initial="hidden"
+      whileInView="visible"
+      transition={{ duration: 0.8, delay: 0.2 }} // Faster and earlier than the previous one
+      viewport={{ once: true }}
+
+      className='flex justify-center mt-20 px-4'>
       <div className='flex flex-col justify-center items-center max-w-full'>
         <div className='flex justify-center items-center text-sm font-bold text-blue-500'>
           <p>ABOUT US</p>
@@ -21,7 +39,7 @@ const Cards = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
 
   )
 }

@@ -19,10 +19,10 @@ const description = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. T
 export default function IPv6Component() {
   return (
     <div className="flex flex-col md:flex-row-reverse items-center gap-6">
-      <div className="1/3 gap-y-4">
-        <FeaturesCard features={featuresIPv6} heading={heading} description={description}/>
+      <div className="1/3 gap-y-4 m-2">
+        <FeaturesCard features={featuresIPv6} heading={heading} description={description} />
         <div className="mt-4"><ContactCard /></div>
-        
+
       </div>
       <div className="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
         {pricingPlansIPv6.map((plan, index) => (

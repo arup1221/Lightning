@@ -1,12 +1,31 @@
+'use client';
 import Image from "next/image";
 import React from "react";
 import { IoDiamond } from "react-icons/io5";
 import { FaCheck } from "react-icons/fa6";
 import { Button } from "./ui/button";
 import { FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
+import Link from "next/link";
 const AboutUs = () => {
   return (
-    <div id="aboutus" className="flex flex-col max-w-full md:flex-row mt-6 md:mt-16 mb-16 mx-6 md:mx-20 max-h-full justify-center items-center">
+    <motion.div id="aboutus"
+      variants={{
+        hidden: {
+          opacity: 0,
+          y: -20,
+        },
+
+        visible: {
+          opacity: 1,
+          y: 0,
+        },
+      }}
+      initial="hidden"
+      whileInView="visible"
+      transition={{ duration: 1, delay: 0.5 }}
+      viewport={{ once: true }}
+      className="flex flex-col max-w-full md:flex-row mt-6 md:mt-16 mb-16 mx-6 md:mx-20 max-h-full justify-center items-center">
       <div className="flex flex-col md:flex-row max-w-full">
 
         {/* Image Section */}
@@ -64,16 +83,18 @@ const AboutUs = () => {
 
           {/* Button Section */}
           <div className="mt-10">
-            <Button
-              type="button"
-              className="h-14 w-40 text-white bg-[#3774F6] hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-[1rem] px-2 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 font-bold"
-            >
-              Get started <FaArrowRight className="ml-1" />
-            </Button>
+            <Link href={"/getstarted"}>
+              <Button
+                type="button"
+                className="h-14 w-40 text-white bg-[#3774F6] hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-[1rem] px-2 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 font-bold"
+              >
+                Get started <FaArrowRight className="ml-1" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
 
   );
 };

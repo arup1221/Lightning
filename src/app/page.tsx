@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar";
 import PricingTabs from "@/components/PricingTabs";
+import ScrollToTop from "@/components/ScrollToTop";
 import React from "react";
 
 
@@ -21,6 +22,7 @@ export default function Home() {
         <Faq />
       </div>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

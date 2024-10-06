@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image'
 import React from 'react'
 import { FaDiscord } from "react-icons/fa";
@@ -5,13 +6,29 @@ import { BiLogoTelegram } from "react-icons/bi";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
+import { motion } from "framer-motion";
 const Footer = () => {
   const copyright = String.fromCodePoint(169);
 
   return (
-    <div className='z-10 bg-gray-300 -mt-10 pb-8'>
+    <div className='z-10 bg-gray-300 -mt-10 pb-8 max-w-screen'>
       <div className='flex justify-between flex-col md:flex-row'>
-        <div className='mt-20 m-5 ml-6 md:ml-16 max-w-full md:w-1/4'>
+        <motion.div
+          variants={{
+            hidden: {
+              opacity: 0,
+              y: -20,
+            },
+            visible: {
+              opacity: 1,
+              y: 0,
+            },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 1, delay: 0.1 }}
+          viewport={{ once: true }}
+          className='mt-20 m-5 ml-6 md:ml-16 max-w-full md:w-1/4'>
           <div>
             <Image src='/logo.png' height={1000} width={100} alt='logo' className='h-20 w-60 rounded-3xl' />
           </div>
@@ -29,27 +46,69 @@ const Footer = () => {
               <p className='text-white text-sm'>Click here to join our discord commuinty</p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         <div className='mt-20 grid grid-cols-2 md:grid-cols-3 gap-x-16 mr-0 md:mr-16 ml-10 md:ml-0'>
-          <div>
+          <motion.div
+            variants={{
+              hidden: {
+                opacity: 0,
+                y: -20,
+              },
+              visible: {
+                opacity: 1,
+                y: 0,
+              },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 1, delay: 0.1 }}
+            viewport={{ once: true }}>
             <h1 className='text-lg text-blue-500 font-bold mt-2'>ACCOUNT</h1>
             <p className='hover:underline cursor-pointer text-sm mt-3'>Create Account</p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            variants={{
+              hidden: {
+                opacity: 0,
+                y: -20,
+              },
+              visible: {
+                opacity: 1,
+                y: 0,
+              },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 1, delay: 0.1 }}
+            viewport={{ once: true }}>
             <h1 className='text-lg text-blue-500 font-bold mt-2'>PRODUCTS</h1>
             <p className='hover:underline cursor-pointer text-sm mt-3'>IPv6</p>
             <p className='hover:underline cursor-pointer text-sm mt-3'>Datacenter</p>
             <p className='hover:underline cursor-pointer text-sm mt-3'>Residential</p>
             <p className='hover:underline cursor-pointer text-sm mt-3'>ISP</p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            variants={{
+              hidden: {
+                opacity: 0,
+                y: -20,
+              },
+              visible: {
+                opacity: 1,
+                y: 0,
+              },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 1, delay: 0.1 }}
+            viewport={{ once: true }}>
             <h1 className='text-lg text-blue-500 font-bold mt-2'>EXPLORE</h1>
             <p className='hover:underline cursor-pointer text-sm mt-3'>FAQs</p>
             <p className='hover:underline cursor-pointer text-sm mt-3'>Terms of Service</p>
             <p className='hover:underline cursor-pointer text-sm mt-3'>Privacy Policy</p>
             <p className='hover:underline cursor-pointer text-sm mt-3'>Cookie Policy</p>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className='border-[1px] min-w-max m-8 border-gray-400'></div>

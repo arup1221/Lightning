@@ -40,13 +40,14 @@ const NavBar = () => {
             </Link>
 
             {/* Get Started Button */}
-            <Button
-              type="button"
-              className="sm:w-32 w-25 md:h-25 h-[2.3rem] text-white bg-[#3774F6] hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-2 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 font-bold"
-            >
-              Get started <FaArrowRight className='font-sm ml-1' />
-            </Button>
-
+            <Link href={"/getstarted"}>
+              <Button
+                type="button"
+                className="sm:w-32 w-25 md:h-25 h-[2.3rem] text-white bg-[#3774F6] hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-2 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 font-bold"
+              >
+                Get started <FaArrowRight className='font-sm ml-1' />
+              </Button>
+            </Link>
             {/* Hamburger button for mobile */}
             <button
               data-collapse-toggle="navbar-cta"
