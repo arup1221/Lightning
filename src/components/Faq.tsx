@@ -31,7 +31,7 @@ const Faq = () => {
           <FAQAccordion />
           <Link href={"/faqs"}>
             <motion.button
-              className='w-40 h-10 m-6 bg-white font-bold rounded-3xl text-black border-2 border-blue-500 flex items-center justify-center'
+              className='w-40 h-10 m-6 bg-white  font-bold rounded-3xl text-black border-2 border-blue-500 flex items-center justify-center'
               initial={{ scale: 1 }}
               whileHover={{ scale: 1.1 }}
               transition={{ type: 'spring', stiffness: 300 }}

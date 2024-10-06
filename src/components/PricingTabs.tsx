@@ -60,7 +60,7 @@ export default function PricingTabs() {
       <div>
         <Tabs value={activeTab} onValueChange={setActiveTab} className="max-w-full flex flex-col justify-center items-center">
           {/* Adjust the width for responsiveness */}
-          <TabsList className={`flex w-full md:w-[38rem] h-16 justify-center gap-2 md:gap-4 mb-8 shadow-xl font-bold py-2 bg-blue-100 text-blue-600 p-4 rounded-lg`}>
+          <TabsList className={`flex w-full md:w-[38rem] h-16 justify-center gap-2 md:gap-4 mb-8  font-bold py-2 bg-blue-100 text-blue-600 p-4 rounded-lg`}>
             {tabData.map((tab) => (
               <TabsTrigger
                 key={tab.id}
@@ -74,7 +74,7 @@ export default function PricingTabs() {
               >
                 {tab.label}
                 {tab.discount && (
-                  <span className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
+                  <span className="absolute -top-4  md:-top-2 md:-right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
                     {tab.discount}
                   </span>
                 )}

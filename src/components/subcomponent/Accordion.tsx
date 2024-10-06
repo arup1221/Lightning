@@ -22,9 +22,9 @@ export default function FAQAccordion() {
                 >
                     <button
                         onClick={() => handleItemClick(item)}
-                        className="flex justify-between items-center p-6 text-base sm:text-lg font-medium w-full text-left transition-colors duration-300 hover:bg-gray-50 group"
+                        className="flex justify-between items-center p-6 text-base sm:text-lg font-medium w-full text-left transition-colors duration-300 bg-white group"
                     >
-                        <span>{getQuestionForItem(item)}</span>
+                        <span >{getQuestionForItem(item)}</span>
                         <ChevronDown
                             className={`w-5 h-5 transition-transform duration-300 ${openItem === item ? 'transform rotate-180' : ''
                                 }`}
@@ -37,7 +37,7 @@ export default function FAQAccordion() {
                             opacity: openItem === item ? 1 : 0,
                         }}
                     >
-                        <div className="p-6 pt-0 text-sm sm:text-base text-gray-600">
+                        <div className="p-6 pt-0 text-sm sm:text-base text-gray-600 bg-white">
                             {getContentForItem(item)}
                         </div>
                     </div>
