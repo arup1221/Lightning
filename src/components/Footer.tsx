@@ -7,6 +7,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import Link from 'next/link';
 const Footer = () => {
   const copyright = String.fromCodePoint(169);
 
@@ -83,10 +84,11 @@ const Footer = () => {
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}>
             <h1 className='text-lg text-blue-500 font-bold mt-2'>PRODUCTS</h1>
-            <p className='hover:underline cursor-pointer text-sm mt-3'>IPv6</p>
-            <p className='hover:underline cursor-pointer text-sm mt-3'>Datacenter</p>
-            <p className='hover:underline cursor-pointer text-sm mt-3'>Residential</p>
-            <p className='hover:underline cursor-pointer text-sm mt-3'>ISP</p>
+
+            <Link href="/#pricing"><p className='hover:underline cursor-pointer text-sm mt-3'>IPv6</p></Link>
+            <Link href="/#pricing"><p className='hover:underline cursor-pointer text-sm mt-3'>Datacenter</p></Link>
+            <Link href="/#pricing"> <p className='hover:underline cursor-pointer text-sm mt-3'>Residential</p></Link>
+            <Link href="/#pricing"><p className='hover:underline cursor-pointer text-sm mt-3'>ISP</p></Link>
           </motion.div>
           <motion.div
             variants={{
@@ -104,7 +106,7 @@ const Footer = () => {
             transition={{ duration: 1, delay: 0.1 }}
             viewport={{ once: true }}>
             <h1 className='text-lg text-blue-500 font-bold mt-2'>EXPLORE</h1>
-            <p className='hover:underline cursor-pointer text-sm mt-3'>FAQs</p>
+            <Link href="/#faqs"><p className='hover:underline cursor-pointer text-sm mt-3'>FAQs</p></Link>
             <p className='hover:underline cursor-pointer text-sm mt-3'>Terms of Service</p>
             <p className='hover:underline cursor-pointer text-sm mt-3'>Privacy Policy</p>
             <p className='hover:underline cursor-pointer text-sm mt-3'>Cookie Policy</p>
