@@ -25,7 +25,7 @@ const AboutUs = () => {
       whileInView="visible"
       transition={{ duration: 1, delay: 0.5 }}
       viewport={{ once: true }}
-      className="flex flex-col max-w-full md:flex-row mt-6 md:mt-16 mb-16 mx-6 md:mx-20 max-h-full justify-center items-center">
+      className="flex flex-col max-w-full md:flex-row mt-6 md:mt-16 mx-6 md:mx-20 max-h-full justify-center items-center pt-32">
       <div className="flex flex-col md:flex-row max-w-full">
 
         {/* Image Section */}

@@ -25,8 +25,8 @@ const Hero = () => {
       whileInView="visible"
       transition={{ duration: 1, delay: 0.5 }}
       viewport={{ once: true }}
-      className='flex flex-col md:flex-row mt-28 md:mt-40 my-10 md:my-14 mx-3 md:mx-20 max-h-full '>
-      <div className='w-full md:w-1/2 pr-4 md:pr-16 mt-8 ml-5 md:ml-0'>
+      className='flex flex-col md:flex-row pt-24 md:pt-28 my-10 md:my-14 mx-3 md:mx-20 max-h-full '>
+      <div className='w-full md:w-1/2 pr-4 md:pr-16 mt-6 ml-5 md:ml-0'>
         <p className='text-sm text-blue-500 font-bold'>EQUIPPED WITH MILLIONS OF IP RESOURCES</p>
         <div className='text-3xl md:text-5xl flex flex-row mt-2 font-bold'>
           <h1>The Most</h1>

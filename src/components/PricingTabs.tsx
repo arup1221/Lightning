@@ -50,7 +50,7 @@ export default function PricingTabs() {
       whileInView="visible"
       transition={{ duration: 1.2, delay: 0.8 }}
       viewport={{ once: true }}
-      id="pricing" className="w-full max-w-6xl mx-auto px-2 md:px-4 py-8 mt-10 mb-16">
+      id="pricing" className="w-full pt-32 max-w-6xl mx-auto px-2 md:px-4 py-8">
       <div className="flex flex-col justify-center items-center gap-y-2">
         <p className="text-sm font-bold text-blue-500">PRICING</p>
         <h1 className="mb-6 font-bold text-2xl md:text-3xl text-center">

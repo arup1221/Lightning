@@ -21,8 +21,8 @@ const NavBar = () => {
   };
 
   return (
-    <>
-      <nav className="fixed w-full top-10 bg-white border-gray-200 dark:bg-gray-900 z-50">
+    // <header className="z-[999] relative">
+      <nav className="fixed w-full top-10 bg-white border-gray-200 z-50 dark:bg-gray-900">
         <div className="ml-5 md:ml-10 mr-5 md:mr-10 flex flex-wrap items-center justify-between py-1 px-4 rounded-xl shadow-md border-2 border-gray-100">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -138,8 +138,8 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
+    // </header>
 
-    </>
   )
 }
 

@@ -23,7 +23,7 @@ const Faq = () => {
       whileInView="visible"
       transition={{ duration: 1, delay: 0.5 }}
       viewport={{ once: true }}
-      id='faqs' className='flex justify-center z-50 max-w-screen'>
+      id='faqs' className='pt-32 flex justify-center z-10 max-w-screen'>
       <div className='bg-gray-100 w-screen md:w-3/5 border-[2px] border-gray-200 rounded-xl'>
         <p className='m-4 ml-10 text-md text-blue-500 font-bold'>FAQs</p>
         <h1 className='m-4 ml-10 text-3xl font-bold'>All your Questions, Answered</h1>
